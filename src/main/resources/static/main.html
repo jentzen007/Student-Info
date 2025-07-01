@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header>
+    <div class="navbar" id="navbar">
+      <h1>Student Dashboard</h1>
+      <div class="dropdown-container">
+        <button id="menu-toggle" class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+         <span class="line"></span>
+        </button>
+        <div class="dropdown-menu" id="dropdown-menu">
+          <button onclick="logout()">Logout</button>
+          <button onclick="window.location.href='update.html'">Update</button>
+          <button onclick="deleteAcc()">Delete Account</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="glass-card">
+      <h2 id="greeting"></h2>
+      <p id="id"><strong>ID:</strong></p>
+      <p id="name"><strong>Name:</strong></p>
+      <p id="age"><strong>Age:</strong></p>
+      <p id="dob"><strong>Date of Birth:</strong></p>
+      <p id="marks"><strong>Marks:</strong></p>
+      <p id="grade"><strong>Grade:</strong></p>
+    </div>
+  </main>
+
+  <script src="main.js">
+  </script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  color: white;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  flex-wrap: wrap;
+}
+
+.navbar.expanded {
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Title */
+.navbar h1 {
+  font-size: 24px;
+}
+
+/* Hamburger */
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 30px;
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  z-index: 101;
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* X icon */
+.navbar.expanded .hamburger .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar.expanded .hamburger .line:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar.expanded .hamburger .line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  color: white;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  flex-wrap: wrap;
+}
+
+.navbar.expanded {
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Title */
+.navbar h1 {
+  font-size: 24px;
+}
+
+/* Hamburger */
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 30px;
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  z-index: 101;
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* X icon */
+.navbar.expanded .hamburger .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar.expanded .hamburger .line:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar.expanded .hamburger .line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  will-change: transform, opacity;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.dropdown-menu {
+  will-change: max-height, opacity;
+}
+
+/* Expanded State */
+.navbar.expanded .dropdown-menu {
+  max-height: 100px; /* adjust based on content */
+  opacity: 1;
+  margin-top: 20px;
+}
+
+.dropdown-menu button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.dropdown-menu button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* Main */
+main {
+  margin-top: 40px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.glass-card {
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  text-align: left;
+}
+
+.glass-card h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.glass-card p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.dropdown-menu button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.dropdown-menu button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Main */
+main {
+  margin-top: 40px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.glass-card {
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  text-align: left;
+}
+
+.glass-card h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.glass-card p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
